@@ -3,8 +3,7 @@ import numpy as np
 import pickle as pk 
 import streamlit as st
 
-model = pk.load(open('model.pkl','rb'))
-
+# Upload Data
 
 cars_data = pd.read_csv('Carprice.csv')
 # Streamlit Page
@@ -110,4 +109,5 @@ p=st.sidebar.button('Predict Price')
 if p:
     Pre=data.predict(df)
     st.sidebar.write('Pice is :',Pre)
+
     st.table(df)
