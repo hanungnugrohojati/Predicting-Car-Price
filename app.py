@@ -5,7 +5,7 @@ import streamlit as st
 
 # Upload Data
 
-cars_data = pd.read_csv('Carprice.csv')
+cars_data = pd.read_csv('Car_price.csv')
 # Streamlit Page
 
 st.title('Predicting Car Price Web')
@@ -111,3 +111,4 @@ if p:
     st.sidebar.write('Pice is :',Pre)
 
     st.table(df)
+
