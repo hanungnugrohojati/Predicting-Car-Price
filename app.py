@@ -3,7 +3,7 @@ import pickle as pk
 import streamlit as st
 
 # Load the trained model
-with open('model.pkl', 'rb') as model_file:
+with open('car_price_model.pkl', 'rb') as model_file:
     model = pk.load(model_file)
 
 # Upload Data
@@ -49,3 +49,4 @@ if st.sidebar.button('Predict Price'):
     Pre = model.predict(df)
     st.subheader(f'Predicted Price: ${Pre[0]:,.2f}')
     st.table(df)
+
